@@ -6,7 +6,7 @@ import { TopicProvider } from "./TopicContext";
 import Nav from "./Nav";
 import AddTopic from "./AddTopic";
 
-const socket = io("http://localhost:4000");
+// const socket = io("http://localhost:4000");
 
 const App = () => {
   return (

@@ -1,16 +1,19 @@
-import React, { useState, createContext, useReducer } from "react";
+import React, { useState, createContext, useReducer, useEffect } from "react";
+import axios from "axios";
 
 export const CTX = createContext();
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case 'add_like':
-      return {likes: state.likes + 1}
+    case "add_like":
+      return { likes: state.likes + 1 };
 
     default:
       return state;
   }
-}
+};
+
+
 
 
 export const TopicProvider = props => {
@@ -20,7 +23,6 @@ export const TopicProvider = props => {
       username: "johndoe",
       likes: 0,
       id: 23124
-
     },
     {
       topic: "game of thrones",
@@ -36,18 +38,12 @@ export const TopicProvider = props => {
     }
   ]);
   const addLike = e => {
-    
     // setLikeNum(likeNum + 1)
-
-    
   };
   const minusLike = e => {
-    
     // setLikeNum(likeNum - 1)
-
     // console.log(likeNum)
   };
-
 
   return (
     <CTX.Provider value={[topics, setTopics, addLike, minusLike]}>

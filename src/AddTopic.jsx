@@ -1,5 +1,6 @@
 import React, { useState, useContext, useReducer } from "react";
 import { CTX, reducer } from "./TopicContext";
+import axios from "axios";
 
 
 const AddTopic = () => {
@@ -15,15 +16,22 @@ const AddTopic = () => {
     setPrice(e.target.value);
   };
 
-  const addTopic = e => {
+  const addTopic = async e => {
     e.preventDefault();
-    setTopics(prevTopics => [...prevTopics, {name, price}])
+    try {
+      const response = await axios.patch("http://localhost:4000/topics/5dc52bebc1096178a8aafb4f", {
+        topic: name,
+        username: `jay${Math.floor(Math.random() *  Math.floor(100))}`
+      })
+      console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (
-    <form onSubmit={addTopic}>
+    <form className='add-topic' onSubmit={addTopic}>
       <input type="text" name="name" value={name} onChange={updateName} />
-      <input type="text" name="price" value={price} onChange={updatePrice} />
       <button>Submit!</button>
     </form>
   );

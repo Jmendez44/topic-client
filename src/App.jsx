@@ -13,8 +13,9 @@ const App = () => {
     <TopicProvider>
       <div className="App">
         <Nav />
+        
         <TopicList />
-        <AddTopic />
+        
       </div>
     </TopicProvider>
   );

@@ -32,10 +32,10 @@ const Likes = ({likes, id}) => {
   // };
 
   return (
-    <div>
-      <button onClick={addLike}>like</button>
-      {likeNum}
-      <button onClick={minusLike}>dislike</button>
+    <div className="like-container">
+      <button onClick={addLike}>&#128077;</button>
+      <p>{likeNum}</p>
+      <button onClick={minusLike}>&#128078;</button>
     </div>
   );
 };

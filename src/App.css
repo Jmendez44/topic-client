@@ -152,7 +152,7 @@ html {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 #root {
@@ -185,12 +185,13 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 25%;
+  width: 384px;
   height: 100%;
   padding: 1%;
   background: #515151;
   -webkit-box-shadow: 8px 0px 10px #5151516c;
           box-shadow: 8px 0px 10px #5151516c;
+  z-index: 100;
 }
 
 .nav-container .add-topic {
@@ -211,23 +212,28 @@ code {
 }
 
 .main-topics {
-  width: 75%;
+  width: 80%;
   overflow-x: scroll;
+  padding: 0.5% 1%;
 }
 
 .topic-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: .5% 1%;
 }
 
 .topic-container form {
@@ -238,15 +244,22 @@ code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-style: bold;
-  background: chocolate;
+  background: #dadada;
+  border: black 1px solid;
   width: 460px;
-  height: 100px;
+  height: 94px;
   margin: 5px;
-  padding: 1%;
+  padding: 1% 0 1% 1%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 5px 8px #acacac6c;
+          box-shadow: 0px 5px 8px #acacac6c;
 }
 
 .topic-container .card .card-content {
@@ -262,11 +275,14 @@ code {
           justify-content: space-evenly;
   height: 100%;
   width: 70%;
+  font-weight: bold;
 }
 
 .topic-container .card .card-content p {
   width: 100%;
   text-align: right;
+  font-weight: normal;
+  font-style: italic;
 }
 
 .topic-container .card .like-container {
@@ -283,16 +299,28 @@ code {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  padding: 5px;
+  width: 10%;
+  height: 94px;
+  background: #bb00ff;
 }
 
 .topic-container .card .like-container p {
-  width: 100%;
-  height: 20%;
-  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 40%;
+  padding: 1% 0;
+  font-size: 1rem;
   text-align: center;
-  font-style: bold;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
 }
 
 .topic-container .card .like-container button {
@@ -307,9 +335,11 @@ code {
           align-items: center;
   background: none;
   border: none;
-  height: 50px;
+  height: 45%;
+  width: 100%;
   cursor: pointer;
   padding: 0;
-  font-size: 20px;
+  font-size: 1em;
+  font-weight: bold;
 }
 /*# sourceMappingURL=App.css.map */

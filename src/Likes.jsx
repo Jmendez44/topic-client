@@ -33,9 +33,9 @@ const Likes = ({likes, id}) => {
 
   return (
     <div className="like-container">
-      <button onClick={addLike}>&#128077;</button>
+      <button onClick={addLike}>+</button>
       <p>{likeNum}</p>
-      <button onClick={minusLike}>&#128078;</button>
+      <button onClick={minusLike}>-</button>
     </div>
   );
 };

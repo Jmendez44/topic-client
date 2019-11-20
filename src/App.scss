@@ -176,7 +176,7 @@ code {
   width: 384px;
   height: 100%;
   padding: 1%;
-  background: #515151;
+  background: #966fd6;
   box-shadow: 8px 0px 10px #5151516c;
   z-index: 100;
   .add-topic {
@@ -217,14 +217,15 @@ code {
     align-items: center;
     justify-content: space-between;
     font-style: bold;
-    background: #dadada;
-    border: black 1px solid;
+    // background: #dadada;
+    border: black 2px solid;
     width: 460px;
     height: 94px;
     margin: 5px;
     padding: 1% 0 1% 1%;
     overflow: hidden;
-    box-shadow: 0px 5px 8px #acacac6c;
+    border-radius: 5px;
+    box-shadow: 0px 3px 2px #acacac6c;
     .card-content {
       display: flex;
       flex-direction: column;
@@ -246,7 +247,7 @@ code {
       align-items: center;
       width: 10%;
       height: 94px;
-      background: #bb00ff;
+      // background: #bb00ff;
       
 
       p {

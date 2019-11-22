@@ -182,12 +182,32 @@ code {
   .add-topic {
     display: flex;
     justify-content: space-around;
-    width: 75%;
+    width: 100%;
     input {
-      width: 75%;
+      width: 55%;
     }
     button {
-      width: 20%;
+      width: 25%;
+      height: 100%;
+      text-decoration: none;
+      background: none;
+      border: black 2px solid;
+      &:before,
+      &:after {
+        background: black;
+        border: 3px solid black;
+        border-image: linear-gradient(45deg, black 0%, adjust-hue(black,10%) 100%);
+        border-image-slice: 1 1 0 1;
+        left: -0.59em;
+        top: .15em;
+        width: .31em;
+        height: 100%;
+        transform: skewY(-45deg);
+  
+
+
+        
+      }
     }
   }
 }

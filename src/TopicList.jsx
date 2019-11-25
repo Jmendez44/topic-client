@@ -3,6 +3,7 @@ import { CTX } from "./TopicContext";
 import Topic from "./Topic";
 import axios from "axios";
 import AddTopic from "./AddTopic";
+import Nav from "./Nav";
 
 const TopicList = () => {
   const [stateTopic, setStateTopic] = useState([]);
@@ -32,6 +33,9 @@ const TopicList = () => {
   }, [stateTopic]);
 
   return (
+    <>
+    <Nav />
+    
     <div className="main-topics">
       <div className="topic-container">
         {topics.map(topic => (
@@ -45,6 +49,7 @@ const TopicList = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

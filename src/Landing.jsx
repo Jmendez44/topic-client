@@ -1,16 +1,24 @@
-import React from 'react'
+import React from "react";
 
 export const Landing = () => {
   return (
     <div className="landing-container">
       <div className="landing-nav">
-        <div className="nav-logo">LOGO</div>
+        <div className="nav-logo">TOPICKS</div>
         <ul className="nav-links">
-          <li>ABOUT</li>
-          <li>DONATE</li>
-          <li className="twitch-btn"> Connect with Twitch</li>
+          <li>
+            <a href="">ABOUT</a>
+          </li>
+          <li>
+            <a href="">DONATE</a>
+          </li>
+          <li>
+            <a className="twitch-btn" href="">
+              Connect with Twitch
+            </a>
+          </li>
         </ul>
-      </div>      
+      </div>
     </div>
-  )
-}
+  );
+};

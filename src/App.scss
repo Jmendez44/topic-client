@@ -144,7 +144,7 @@ html {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  
+
   overflow: hidden;
   font-family: "Archivo", sans-serif;
 }
@@ -172,7 +172,7 @@ code {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  color: #FFDD00;
+  color: #ffdd00;
   // position: fixed;
   width: 384px;
   height: 100%;
@@ -197,17 +197,17 @@ code {
       &:after {
         background: black;
         border: 3px solid black;
-        border-image: linear-gradient(45deg, black 0%, adjust-hue(black,10%) 100%);
+        border-image: linear-gradient(
+          45deg,
+          black 0%,
+          adjust-hue(black, 10%) 100%
+        );
         border-image-slice: 1 1 0 1;
         left: -0.59em;
-        top: .15em;
-        width: .31em;
+        top: 0.15em;
+        width: 0.31em;
         height: 100%;
         transform: skewY(-45deg);
-  
-
-
-        
       }
     }
   }
@@ -228,7 +228,6 @@ code {
   flex-wrap: wrap;
   color: white;
   // padding: 0.5% 1%;
-  
 
   form {
     width: 100%;
@@ -270,7 +269,6 @@ code {
       width: 10%;
       height: 94px;
       // background: #bb00ff;
-      
 
       p {
         display: flex;
@@ -281,12 +279,11 @@ code {
         padding: 1% 0;
         font-size: 1rem;
         text-align: center;
-        
+
         border-top: 1px black solid;
         border-bottom: 1px black solid;
       }
       button {
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -306,21 +303,54 @@ code {
 .landing-container {
   background: #212121;
   color: white;
-  display: flex;
-  justify-content: center;
+
   width: 100vw;
   height: 100vh;
-  .landing-nav{
+  .landing-nav {
     display: flex;
     justify-content: space-between;
+    margin: auto;
     align-items: center;
     width: 1200px;
     height: 15%;
-    border: black 1px solid;
-
-    .nav-links{
+    // border: black 1px solid;
+    .nav-logo {
+      font-weight: bold;
       display: flex;
+      font-size: 2rem;
+      color: #ffdd00;
+      
+      
+      text-shadow: -4px 4px 0px rgba(255, 0, 68, 0.767), -6px 6px 0px rgba(68, 255, 0, 0.5);
     }
 
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // background: chartreuse;
+      width: 32%;
+      height: 100%;
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      li {
+        font-size: 1rem;
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+      .twitch-btn {
+        display: flex;
+        background: #bb00ff;
+        align-items: center;
+        justify-content: center;
+        width: 175px;
+        height: 45px;
+        border-radius: 5px;
+      }
+    }
   }
 }

@@ -185,10 +185,11 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #FFDD00;
   width: 384px;
   height: 100%;
   padding: 1%;
-  background: #966fd6;
+  background: #515151;
   -webkit-box-shadow: 8px 0px 10px #5151516c;
           box-shadow: 8px 0px 10px #5151516c;
   z-index: 100;
@@ -252,6 +253,7 @@ code {
   height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  color: white;
 }
 
 .topic-container form {
@@ -269,13 +271,12 @@ code {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-style: bold;
-  border: black 2px solid;
+  background: #515151;
   width: 460px;
   height: 94px;
   margin: 5px;
   padding: 1% 0 1% 1%;
   overflow: hidden;
-  border-radius: 5px;
   -webkit-box-shadow: 0px 3px 2px #acacac6c;
           box-shadow: 0px 3px 2px #acacac6c;
 }
@@ -358,5 +359,39 @@ code {
   padding: 0;
   font-size: 1em;
   font-weight: bold;
+}
+
+.landing-container {
+  background: #212121;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.landing-container .landing-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1200px;
+  height: 15%;
+  border: black 1px solid;
+}
+
+.landing-container .landing-nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=App.css.map */

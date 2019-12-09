@@ -1,4 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Archivo:400,700&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Archivo:400,700&display=swap");
+
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
 
 html,
 body,
@@ -104,7 +114,7 @@ section {
 }
 body {
   line-height: 1;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
 }
 ol,
 ul {
@@ -141,12 +151,13 @@ html {
 
 .App {
   display: flex;
+  justify-content: center;
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-
+  background: #212121;
   overflow: hidden;
-  font-family: "Archivo", sans-serif;
+  // font-family: "Archivo", sans-serif;
 }
 #root {
   width: 100vw;
@@ -177,7 +188,7 @@ code {
   width: 384px;
   height: 100%;
   padding: 1%;
-  background: #515151;
+  background: #bb00ff;
   box-shadow: 8px 0px 10px #5151516c;
   z-index: 100;
   .add-topic {
@@ -301,56 +312,161 @@ code {
 }
 
 .landing-container {
-  background: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
   color: white;
-
+  margin-top: 165px;
   width: 100vw;
-  height: 100vh;
-  .landing-nav {
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    align-items: center;
-    width: 1200px;
-    height: 15%;
-    // border: black 1px solid;
-    .nav-logo {
-      font-weight: bold;
-      display: flex;
-      font-size: 2rem;
-      color: #ffdd00;
-      
-      
-      text-shadow: -4px 4px 0px rgba(255, 0, 68, 0.767), -6px 6px 0px rgba(68, 255, 0, 0.5);
-    }
 
-    .nav-links {
+  .decription {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    // section {
+    //   display: flex;
+    //   form{
+    //     margin-top: auto;
+    //   }
+    // }
+    .btns {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      // background: chartreuse;
-      width: 32%;
-      height: 100%;
-      a {
+      justify-content: center;
+      width: 50%;
+      height: 50%;
+      .twitch {
+        background-color: #bb00ff;
+        
         color: white;
-        text-decoration: none;
-        font-weight: bold;
+        img {
+          width: 8%;
+          margin-right: 5px;
+        }
       }
-      li {
-        font-size: 1rem;
-        display: flex;
-        height: 100%;
-        align-items: center;
-      }
-      .twitch-btn {
-        display: flex;
-        background: #bb00ff;
-        align-items: center;
-        justify-content: center;
-        width: 175px;
-        height: 45px;
-        border-radius: 5px;
+      button {
+        border: none;
+        margin: auto 5px;
+        border-radius: 4px;
+        width: 30%;
+        height: 35%;
+        font-size: 16px;
+        background-color: white;
       }
     }
   }
+  .example-container {
+    display: flex;
+
+    overflow: hidden;
+    width: 1080px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+
+    .right-example {
+      display: flex;
+      align-content: center;
+      height: 100%;
+      width: 82%;
+
+      .ex-topics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 98%;
+        height: 98%;
+        margin: auto;
+        .ex-topic {
+          width: 49%;
+          height: 15%;
+          background: grey;
+          margin: 3px;
+        }
+      }
+    }
+
+    .left-example {
+      height: 100%;
+      width: 18%;
+      background: #bb00ff;
+      .avi {
+        background: white;
+        border-radius: 64px;
+        margin: 65px auto 0 auto;
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  width: 95vw;
+  height: 10%;
+  // border: black 1px solid;
+
+  .nav-logo {
+    font-weight: bold;
+    display: flex;
+    font-size: 2.6rem;
+    color: #ffdd00;
+
+    text-shadow: -4px 4px 0px rgba(255, 0, 68, 0.767),
+      -6px 6px 0px rgba(68, 255, 0, 0.5);
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background: chartreuse;
+    width: 350px;
+    height: 100%;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    li {
+      font-size: 1rem;
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+    .twitch-btn {
+      display: flex;
+      background: #bb00ff;
+      align-items: center;
+      justify-content: center;
+      width: 190px;
+      height: 45px;
+      border-radius: 5px;
+      padding: 5px;
+      img {
+        width: 8%;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.footer {
+  height: 100px;
 }
